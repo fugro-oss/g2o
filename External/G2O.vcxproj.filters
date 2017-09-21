@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\external">
+      <UniqueIdentifier>{964cd03c-ffdb-46cb-97b9-9449f8c5dac4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\external\csparse">
+      <UniqueIdentifier>{10d7f883-6e0c-4c11-93e5-b12315255027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{dca5780f-5c03-4d43-ae5b-9c7eb6e8995d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\solvers">
+      <UniqueIdentifier>{d78dd1ef-8c0e-431f-bf18-6d71246f72f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\solvers\csparse">
+      <UniqueIdentifier>{6761cc53-90e6-47ed-bbf5-3b849c06ed2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\stuff">
+      <UniqueIdentifier>{0eba5f14-0382-4a52-83e1-fd0e3c0d20c6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="g2o\core\batch_stats.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\cache.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\estimate_propagator.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\factory.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\hyper_dijkstra.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\hyper_graph.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\hyper_graph_action.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\jacobian_workspace.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\marginal_covariance_cholesky.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\matrix_structure.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimizable_graph.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm_dogleg.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm_factory.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm_gauss_newton.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm_levenberg.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\optimization_algorithm_with_hessian.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\parameter.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\parameter_container.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\robust_kernel.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\robust_kernel_factory.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\robust_kernel_impl.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\solver.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\sparse_optimizer.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\core\sparse_optimizer_terminate_action.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\command_args.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\filesys_tools.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\os_specific.c">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\property.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\sampler.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\sparse_helper.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\string_tools.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\tictoc.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\stuff\timeutil.cpp">
+      <Filter>Source Files\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\solvers\csparse\csparse_helper.cpp">
+      <Filter>Source Files\solvers\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_add.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_amd.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_chol.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_cholsol.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_compress.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_counts.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_cumsum.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_dfs.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_dmperm.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_droptol.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_dropzeros.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_dupl.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_entry.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_ereach.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_etree.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_fkeep.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_gaxpy.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_happly.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_house.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_ipvec.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_leaf.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_load.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_lsolve.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_ltsolve.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_lu.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_lusol.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_malloc.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_maxtrans.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_multiply.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_norm.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_permute.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_pinv.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_post.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_print.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_pvec.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_qr.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_qrsol.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_randperm.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_reach.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_scatter.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_scc.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_schol.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_spsolve.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_sqr.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_symperm.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_tdfs.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_transpose.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_updown.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_usolve.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_util.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="external\csparse\cs_utsolve.c">
+      <Filter>Source Files\external\csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\solvers\csparse\solver_csparse.cpp">
+      <Filter>Source Files\solvers\csparse</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
