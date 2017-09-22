@@ -17,7 +17,6 @@ namespace Fugro
         /// <summary>
         /// Create a new state that will be estimated during optimization.
         /// </summary>
-        /// <remarks>Add this state to a graph to be estimated.</remarks>
         State(T initial, int dimension);
 
         /// <summary>

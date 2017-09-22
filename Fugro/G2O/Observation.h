@@ -24,7 +24,7 @@ namespace Fugro
       /// <summary>
       /// Create a new observation that represents a measurement.
       /// </summary>
-      /// <param name="stdevs">The standard deviation of the measurment.</param>
+      /// <param name="stdevs">The standard deviation of the measurement for each dimension.</param>
       /// <param name="states">All the states to which this observation relates.</param>
       /// <remarks>Add this observatoin to a graph to be used.</remarks>
       Observation(array<double>^ stdevs, ... array<BaseState^>^ states);
