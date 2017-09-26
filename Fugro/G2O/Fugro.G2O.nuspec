@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Fugro.G2O</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Fugro</authors>
     <owners>Fugro</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

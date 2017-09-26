@@ -2,7 +2,7 @@
 A .Net wrapper for the G2O (graph-based optimization) library
 
 ## Get Started
-Clone this project and build it by using Visual Studio 2013 (or later). Reference Fugro.G2O.dll in your own project and you are ready to go. The repository includes unit tests which can be run by using NUnit.
+Clone this project and build it by using Visual Studio 2017. Reference Fugro.G2O.dll in your own project and you are ready to go. The repository includes unit tests which can be run by using NUnit.
 
 ### C# example
 1. Create a class for each type of state you have. Derive from State<T> and implement the OnUpdate function. Provide an initial value and the dimension of the state to the base class. Next instantiate it for each state you want to estimate.
