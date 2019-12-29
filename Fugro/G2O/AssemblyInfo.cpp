@@ -5,7 +5,7 @@ using namespace System::Runtime::InteropServices;
 using namespace System::Security::Permissions;
 
 [assembly:AssemblyProduct("Fugro.G2O")];
-[assembly:AssemblyVersion("1.0.1")];
+[assembly:AssemblyVersion("2.0.0")];
 [assembly:AssemblyCulture("")];
 
 [assembly:AssemblyCompany("Fugro")];

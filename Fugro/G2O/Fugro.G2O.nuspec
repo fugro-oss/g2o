@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Fugro.G2O</id>
-    <version>1.0.1</version>
+    <version>2.0.0</version>
     <authors>Fugro</authors>
     <owners>Fugro</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -10,7 +10,8 @@
     <copyright>© Fugro. All rights reserved.</copyright>
   </metadata>
   <files>
-    <file src="bin\x64\Release\Fugro.G2O.dll" target="lib\net45" /> 
-    <file src="bin\x64\Release\Fugro.G2O.xml" target="lib\net45" /> 
+    <file src="bin\x64\Release\Fugro.G2O.dll" target="lib\netcoreapp3.1" /> 
+    <file src="bin\x64\Release\Fugro.G2O.xml" target="lib\netcoreapp3.1" /> 
+    <file src="bin\x64\Release\Ijwhost.dll" target="lib\netcoreapp3.1" /> 
 </files>
 </package>
