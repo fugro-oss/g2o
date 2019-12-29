@@ -1,4 +1,3 @@
-#include "Stdafx.h"
 #include "Observation.h"
 #include "RobustKernel.h"
 

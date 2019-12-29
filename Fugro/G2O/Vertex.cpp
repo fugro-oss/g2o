@@ -1,5 +1,3 @@
-#include "Stdafx.h"
-
 #pragma unmanaged
 #include <Eigen/Cholesky>
 #include <Eigen/LU>

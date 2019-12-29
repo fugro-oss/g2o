@@ -1,4 +1,3 @@
-#include "Stdafx.h"
 #include "IterationActions.h"
 
 using namespace Fugro::G2O;
