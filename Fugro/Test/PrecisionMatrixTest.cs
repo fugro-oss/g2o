@@ -1,5 +1,4 @@
 using System;
-using System.Windows;
 using NUnit.Framework;
 
 namespace Fugro.G2O.Test
@@ -194,6 +193,40 @@ namespace Fugro.G2O.Test
             protected override Point OnUpdate(double[] delta)
             {
                 return Estimate + new Vector(delta[0], delta[1]);
+            }
+        }
+
+        private struct Point
+        {
+            public double X { get; private set; }
+            public double Y { get; private set; }
+
+            public Point(double x, double y)
+            {
+                X = x;
+                Y = y;
+            }
+
+            public static Vector operator -(Point point1, Point point2)
+            {
+                return new Vector(point1.X - point2.X, point1.Y - point2.Y);
+            }
+
+            public static Point operator +(Point point, Vector vector)
+            {
+                return new Point(point.X + vector.X, point.Y + vector.Y);
+            }
+        }
+
+        private struct Vector
+        {
+            public double X { get; private set; }
+            public double Y { get; private set; }
+
+            public Vector(double x, double y)
+            {
+                X = x;
+                Y = y;
             }
         }
     }
