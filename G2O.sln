@@ -18,6 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fugro.G2O.Test", "Fugro\Tes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		clr-release|Any CPU = clr-release|Any CPU
+		clr-release|Mixed Platforms = clr-release|Mixed Platforms
+		clr-release|x64 = clr-release|x64
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|x64 = Debug|x64
@@ -26,6 +29,12 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.clr-release|Any CPU.ActiveCfg = Release|x64
+		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.clr-release|Any CPU.Build.0 = Release|x64
+		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.clr-release|Mixed Platforms.ActiveCfg = Release|x64
+		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.clr-release|Mixed Platforms.Build.0 = Release|x64
+		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.clr-release|x64.ActiveCfg = Release|x64
+		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.clr-release|x64.Build.0 = Release|x64
 		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.Debug|Any CPU.Build.0 = Debug|x64
 		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
@@ -38,6 +47,12 @@ Global
 		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.Release|Mixed Platforms.Build.0 = Release|x64
 		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.Release|x64.ActiveCfg = Release|x64
 		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.Release|x64.Build.0 = Release|x64
+		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.clr-release|Any CPU.ActiveCfg = clr-release|x64
+		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.clr-release|Any CPU.Build.0 = clr-release|x64
+		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.clr-release|Mixed Platforms.ActiveCfg = clr-release|x64
+		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.clr-release|Mixed Platforms.Build.0 = clr-release|x64
+		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.clr-release|x64.ActiveCfg = clr-release|x64
+		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.clr-release|x64.Build.0 = clr-release|x64
 		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.Debug|Any CPU.Build.0 = Debug|x64
 		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.Debug|Mixed Platforms.ActiveCfg = Debug|x64
@@ -50,6 +65,9 @@ Global
 		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.Release|Mixed Platforms.Build.0 = Release|x64
 		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.Release|x64.ActiveCfg = Release|x64
 		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.Release|x64.Build.0 = Release|x64
+		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.clr-release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.clr-release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.clr-release|x64.ActiveCfg = Release|Any CPU
 		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

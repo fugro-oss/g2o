@@ -10,6 +10,8 @@
     <copyright>© Fugro. All rights reserved.</copyright>
   </metadata>
   <files>
+    <file src="bin\x64\clr-release\Fugro.G2O.dll" target="lib\net45" />
+    <file src="bin\x64\clr-release\Fugro.G2O.xml" target="lib\net45" />
     <file src="bin\x64\Release\Fugro.G2O.dll" target="lib\netcoreapp3.1" /> 
     <file src="bin\x64\Release\Fugro.G2O.xml" target="lib\netcoreapp3.1" /> 
     <file src="bin\x64\Release\Ijwhost.dll" target="lib\netcoreapp3.1" /> 
