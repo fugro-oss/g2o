@@ -8,12 +8,15 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A .Net wrapper for the G2O (graph-based optimization) library</description>
     <copyright>© Fugro. All rights reserved.</copyright>
+    <contentFiles>
+      <files include="any/netcoreapp3.1/Ijwhost.dll" buildAction="None" copyToOutput="true" flatten="true" />
+    </contentFiles>
   </metadata>
   <files>
     <file src="bin\x64\clr-release\Fugro.G2O.dll" target="lib\net45" />
     <file src="bin\x64\clr-release\Fugro.G2O.xml" target="lib\net45" />
-    <file src="bin\x64\Release\Fugro.G2O.dll" target="lib\netcoreapp3.1" /> 
-    <file src="bin\x64\Release\Fugro.G2O.xml" target="lib\netcoreapp3.1" /> 
-    <file src="bin\x64\Release\Ijwhost.dll" target="lib\netcoreapp3.1" /> 
-</files>
+    <file src="bin\x64\Release\Fugro.G2O.dll" target="lib\netcoreapp3.1" />
+    <file src="bin\x64\Release\Fugro.G2O.xml" target="lib\netcoreapp3.1" />
+    <file src="bin\x64\Release\Ijwhost.dll" target="contentFiles\any\netcoreapp3.1" />
+  </files>
 </package>
