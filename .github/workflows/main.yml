@@ -9,12 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
         
     - name: Setup NuGet.exe for use with actions
       uses: NuGet/setup-nuget@v1.0.2
@@ -31,5 +25,8 @@ jobs:
         cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
         .\MSBuild.exe $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=clr-release /p:Platform=x64
         
-    - run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\Release\netcoreapp3.1\Fugro.G2O.Test.dll
+    - name: Test
+      run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\Release\netcoreapp3.1\Fugro.G2O.Test.dll
         
+    - name: Pack
+      run: nuget pack $Env:GITHUB_WORKSPACE\Fugro\G2O\Fugro.G2O.nuspec
