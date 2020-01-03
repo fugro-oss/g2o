@@ -30,3 +30,6 @@ jobs:
         
     - name: Pack
       run: nuget pack $Env:GITHUB_WORKSPACE\Fugro\G2O\Fugro.G2O.nuspec
+    
+    - name: Publish
+      run: nuget push "$Env:GITHUB_WORKSPACE/Fugro.G2O.2.0.0.nupkg" --source "github"
