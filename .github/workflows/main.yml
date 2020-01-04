@@ -29,9 +29,9 @@ jobs:
         
     - name: Pack
       run: nuget pack $Env:GITHUB_WORKSPACE\Fugro\G2O\Fugro.G2O.nuspec
-    
-    - name: Add GitHub package registry
-      run: nuget sources Add -Name "github" -Source "https://nuget.pkg.github.com/fugro/index.json" -UserName fugro -Password ${{ secrets.GITHUB_TOKEN }}      
-                                                     
+      
     - name: Publish
-      run: nuget push "$Env:GITHUB_WORKSPACE\Fugro.G2O.2.0.0.nupkg" -Source "github" -SkipDuplicate
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: Fugro.G2O.2.0.0.nupkg 
+        path: $Env:GITHUB_WORKSPACE      
