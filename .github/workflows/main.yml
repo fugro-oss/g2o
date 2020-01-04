@@ -4,16 +4,18 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: windows-latest
-
     steps:
     - uses: actions/checkout@v1
         
     - name: Setup NuGet.exe for use with actions
       uses: NuGet/setup-nuget@v1.0.2
-
-    - run: nuget restore G2O.sln
+    
+    - name: Add GitHub package registry
+      run: nuget sources add -name "github" -Source https://nuget.pkg.github.com/fugro/index.json -Username fugro -Password ${{ secrets.GITHUB_TOKEN }}      
+      
+    - name: Restore
+      run: nuget restore G2O.sln
 
     - name: Build .Net Framework
       run: |
@@ -32,4 +34,4 @@ jobs:
       run: nuget pack $Env:GITHUB_WORKSPACE\Fugro\G2O\Fugro.G2O.nuspec
     
     - name: Publish
-      run: nuget push "$Env:GITHUB_WORKSPACE\Fugro.G2O.2.0.0.nupkg" -Source "github"
+      run: nuget push "$Env:GITHUB_WORKSPACE\Fugro.G2O.2.0.0.nupkg" -Source "github" -SkipDuplicate
