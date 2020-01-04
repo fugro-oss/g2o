@@ -30,9 +30,8 @@ jobs:
     - name: Pack
       run: nuget pack $Env:GITHUB_WORKSPACE\Fugro\G2O\Fugro.G2O.nuspec
 
-
-
     - name: Publish
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: Fugro.G2O.2.0.0.nupkg 
+        name: Fugro.G2O.2.0.0.nupkg
+        path: \
