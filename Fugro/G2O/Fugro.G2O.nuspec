@@ -11,6 +11,10 @@
     <contentFiles>
       <files include="any/netcoreapp3.1/Ijwhost.dll" buildAction="None" copyToOutput="true" flatten="true" />
     </contentFiles>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework=".NETCoreApp3.1" />
+    </dependencies>
   </metadata>
   <files>
     <file src="bin\x64\clr-release\Fugro.G2O.dll" target="lib\net45" />
