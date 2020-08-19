@@ -1,4 +1,3 @@
-#include "Stdafx.h"
 #include "Graph.h"
 #include "IterationActions.h"
 #include "IterationEventArgs.h"

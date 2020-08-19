@@ -1,5 +1,3 @@
-#include "Stdafx.h"
-
 #include "Observation.h"
 
 #pragma unmanaged

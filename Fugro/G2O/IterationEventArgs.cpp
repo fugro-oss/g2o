@@ -1,4 +1,3 @@
-#include "Stdafx.h"
 #include "IterationEventArgs.h"
 
 using namespace Fugro::G2O;
