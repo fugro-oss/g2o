@@ -54,7 +54,16 @@ class Measurement : Observation
 ```
 
 ## Externals
-For easy compilation, we included necessary parts of [G2O](https://github.com/RainerKuemmerle/g2o) and [Eigen](http://eigen.tuxfamily.org) in the repository.
+For easy compilation, we included necessary parts of [G2O](https://github.com/RainerKuemmerle/g2o), 
+[Eigen](http://eigen.tuxfamily.org) and [CSPARSE](https://people.sc.fsu.edu/~jburkardt/c_src/csparse/csparse.html) 
+in the repository. 
 
 ## License
-This library is licensed under the MIT License
+A built version of Fugro.G2O contains components from the following sources:
+
+* Fugro.G2O: MIT
+* G2O: BSD 2-Clause
+* Eigen: MPL 2, with parts LGPL-2.1
+* csparse: LGPL-2.1+
+
+See [LICENSES] for details. 
