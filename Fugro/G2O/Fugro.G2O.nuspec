@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Fugro.G2O</id>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <authors>Fugro</authors>
     <owners>Fugro</owners>
     <projectUrl>https://github.com/fugro/g2o</projectUrl>
@@ -11,8 +11,7 @@
     <description>A .Net wrapper for the G2O (graph-based optimization) library</description>
     <copyright>Fugro.G2O contributors, G2O contributors, CSparse contributors, Eigen contributors.</copyright>
     <contentFiles>
-      <files include="any/netcoreapp3.1/Ijwhost.dll" buildAction="None" copyToOutput="true" flatten="true" />
-      <files include="Fugro-G2O-LICENSE" buildAction="None" copyToOutput="true" flatten="true" />
+      <files include="**" buildAction="None" copyToOutput="true" flatten="true" />
     </contentFiles>
     <dependencies>
       <group targetFramework=".NETFramework4.5" />
@@ -25,6 +24,9 @@
     <file src="bin\x64\Release\Fugro.G2O.dll" target="lib\netcoreapp3.1" />
     <file src="bin\x64\Release\Fugro.G2O.xml" target="lib\netcoreapp3.1" />
     <file src="bin\x64\Release\Ijwhost.dll" target="contentFiles\any\netcoreapp3.1" />
-    <file src="..\..\LICENSE" target="Fugro-G2O-LICENSE" />
+    <file src="..\..\LICENSE.txt" target="contentFiles\any\netcoreapp3.1\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE.txt" target="contentFiles\any\net45\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE.txt" target="Content\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE.txt" target="" />
   </files>
 </package>

@@ -66,4 +66,4 @@ A built version of Fugro.G2O contains components from the following sources:
 * Eigen: MPL 2, with parts LGPL-2.1
 * csparse: LGPL-2.1+
 
-See [LICENSES] for details. 
+See [LICENSE.txt] for details. 
