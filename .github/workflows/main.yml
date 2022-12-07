@@ -1,6 +1,10 @@
-name: CI
+name: Build and Test
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -14,24 +18,26 @@ jobs:
     - name: Restore
       run: nuget restore G2O.sln
 
-    - name: Build .Net Framework
+    - name: Build .Net 6.0
       run: |
         cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
-        .\MSBuild.exe $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=Release /p:Platform=x64
-        
+        .\MSBuild.exe $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=net6-release /p:Platform=x64
+
+    - name: Test .Net 6.0
+      run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\net6-release\net6.0\Fugro.G2O.Test.dll
+
     - name: Build .Net Core
       run: |
         cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
         .\MSBuild.exe $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=clr-release /p:Platform=x64
-        
-    - name: Test
-      run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\Release\netcoreapp3.1\Fugro.G2O.Test.dll
-        
-    - name: Pack
-      run: nuget pack $Env:GITHUB_WORKSPACE\Fugro\G2O\Fugro.G2O.nuspec
 
-    - name: Publish
-      uses: actions/upload-artifact@v2
-      with:
-        name: package
-        path: .\*.nupkg
+    - name: Test .Net Core
+      run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\clr-release\net45\Fugro.G2O.Test.dll
+
+    - name: Build .Net Framework
+      run: |
+        cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
+        .\MSBuild.exe $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=Release /p:Platform=x64
+               
+    - name: Test .Net Framework
+      run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\Release\netcoreapp3.1\Fugro.G2O.Test.dll
