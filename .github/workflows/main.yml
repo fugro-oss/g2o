@@ -24,17 +24,18 @@ jobs:
     - name: Build .Net Framework
       run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=clr-release /p:Platform=x64
 
-    - name: Test .Net Framework
-      run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\clr-release\net48\Fugro.G2O.Test.dll
-      
     - name: Build .Net Core
       run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=Release /p:Platform=x64
-               
-    - name: Test .Net Core
-      run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\Release\netcoreapp3.1\Fugro.G2O.Test.dll
 
     - name: Build .Net 6.0
       run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=net6-release /p:Platform=x64
 
+    - name: Test .Net Core
+      run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\Release\netcoreapp3.1\Fugro.G2O.Test.dll
+
+    - name: Test .Net Framework
+      run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\clr-release\net48\Fugro.G2O.Test.dll
+
     - name: Test .Net 6.0
       run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\net6-release\net6.0\Fugro.G2O.Test.dll
+
