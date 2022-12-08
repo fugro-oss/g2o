@@ -24,10 +24,10 @@
     <file src="bin\x64\clr-release\Fugro.G2O.xml" target="lib\net48" />
     <file src="bin\x64\Release\Fugro.G2O.dll" target="lib\netcoreapp3.1" />
     <file src="bin\x64\Release\Fugro.G2O.xml" target="lib\netcoreapp3.1" />
-    <file src="bin\x64\Release\Ijwhost.dll" target="contentFiles\any\netcoreapp3.1" />
+    <file src="bin\x64\Release\Ijwhost.dll" target="lib\netcoreapp3.1" />
     <file src="bin\x64\net6-release\Fugro.G2O.dll" target="lib\net6.0" />
     <file src="bin\x64\net6-release\Fugro.G2O.xml" target="lib\net6.0" />
-    <file src="bin\x64\net6-release\Ijwhost.dll" target="contentFiles\any\net6.0" />
+    <file src="bin\x64\net6-release\Ijwhost.dll" target="lib\net6.0" />
     <file src="..\..\LICENSE.txt" target="contentFiles\any\netcoreapp3.1\Fugro-G2O-LICENSE.txt" />
     <file src="..\..\LICENSE.txt" target="contentFiles\any\net48\Fugro-G2O-LICENSE.txt" />
     <file src="..\..\LICENSE.txt" target="Content\Fugro-G2O-LICENSE.txt" />
