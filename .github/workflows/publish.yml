@@ -40,5 +40,11 @@ jobs:
     - name: Pack
       run: nuget pack $Env:GITHUB_WORKSPACE\Fugro\G2O\Fugro.G2O.nuspec -Version ${{ steps.get_version.outputs.VERSION }}
 
+    - name: Publish
+      uses: actions/upload-artifact@v2
+      with:
+        name: package-${{ steps.get_version.outputs.VERSION }}
+        path: .\*.nupkg
+        
     - name: Push (nuget packages)
       run: dotnet nuget push "$Env:GITHUB_WORKSPACE\**\*.nupkg" --skip-duplicate --source https://api.nuget.org/v3/index.json --api-key "${{secrets.NUGET_ORG_API_KEY}}"
