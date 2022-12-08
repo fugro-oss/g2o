@@ -33,3 +33,11 @@ jobs:
     - name: Test .Net 6.0
       run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\net6-release\net6.0\Fugro.G2O.Test.dll
 
+    - name: Pack
+      run: nuget pack $Env:GITHUB_WORKSPACE\Fugro\G2O\Fugro.G2O.nuspec
+
+    - name: Publish
+      uses: actions/upload-artifact@v2
+      with:
+        name: package
+        path: .\*.nupkg
