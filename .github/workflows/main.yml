@@ -22,10 +22,10 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
 
     - name: Build .Net Framework
-      run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=clr-release /p:Platform=x64
+      run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=net48-release /p:Platform=x64
 
     - name: Build .Net Core
-      run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=Release /p:Platform=x64
+      run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=netcoreapp31-release /p:Platform=x64
 
     - name: Build .Net 6.0
       run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=net6-release /p:Platform=x64

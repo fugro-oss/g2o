@@ -67,3 +67,8 @@ A built version of Fugro.G2O contains components from the following sources:
 * csparse: LGPL-2.1+
 
 See [LICENSE.txt] for details. 
+
+# Packaging
+Github also builds a package for .NetFramework 4.8, .NetCoreApp 3.1 and .Net 6.0. The solution is built 3 times, for 3 configurations: `net48-release`, `netcoreapp31-release` and `net6-release`. Only for `net6-release` the test project is built and run as it seems you can't set TargetFramework to be configuration-specific, and multitarget doesn't work as G2O is built in 3 separate builds.
+### Ijwhost.dll
+This dll is copied into the package, so it is distributed when another package references not this package, but yet another package that does... Be warned this may cause problems when a conflicting version of Ijwhost.dll is needed by other of your dependencies.
