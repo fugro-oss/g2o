@@ -15,8 +15,8 @@
     </contentFiles>
     <dependencies>
       <group targetFramework=".NETFramework4.8" />
-		  <group targetFramework=".NETCoreApp3.1" />
-		  <group targetFramework=".NET6.0" />
+      <group targetFramework=".NETCoreApp3.1" />
+      <group targetFramework=".NET6.0" />
 	</dependencies>
   </metadata>
   <files>
@@ -30,6 +30,10 @@
     <file src="bin\x64\net6-release\Ijwhost.dll" target="lib\net6.0" />
     <file src="..\..\LICENSE.txt" target="contentFiles\any\netcoreapp3.1\Fugro-G2O-LICENSE.txt" />
     <file src="..\..\LICENSE.txt" target="contentFiles\any\net48\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE.txt" target="contentFiles\any\net6.0\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE.txt" target="lib\net6.0\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE.txt" target="lib\net48\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE.txt" target="lib\netcoreapp3.1\Fugro-G2O-LICENSE.txt" />
     <file src="..\..\LICENSE.txt" target="Content\Fugro-G2O-LICENSE.txt" />
     <file src="..\..\LICENSE.txt" target="" />
   </files>
