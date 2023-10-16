@@ -9,7 +9,7 @@ All external contributors to the project, we are grateful for all their help.
   
   
 ## Fugro contributors
-Contributors who contributed as part of they work at Fugro were:
+Contributors who contributed as part of their work at Fugro were:
 
 - **[Evert Schippers](https://github.com/EvertSchippers)
 - **[Hendrik Wouters](https://github.com/user/hwouters)**
