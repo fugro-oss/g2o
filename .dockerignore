@@ -1,0 +1,8 @@
+.git
+.github
+.vs
+build
+**/bin
+**/obj
+Dockerfile
+UpgradeLog.htm

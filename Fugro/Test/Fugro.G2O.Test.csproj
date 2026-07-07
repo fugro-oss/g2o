@@ -1,21 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0</TargetFrameworks>
+    <TargetFramework>net10.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <AssemblyName>Fugro.G2O.Test</AssemblyName>
-    <Configurations>Debug;netcoreapp31-release;net6-release;net48-release</Configurations>
-    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="nunit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="NUnit" Version="4.6.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="6.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\G2O\Fugro.G2O.vcxproj" />
+    <ProjectReference Include="..\G2O.NET\Fugro.G2O.csproj" />
   </ItemGroup>
 
 </Project>

@@ -17,9 +17,9 @@ namespace Fugro.G2O.Test
             var graph = new Graph();
             graph.AddObservation(measurement);
 
-            Assert.AreEqual(1, graph.Observations.OfType<Measurement>().Count());
-            Assert.AreEqual(1, graph.States.OfType<State>().Count());
-            Assert.AreEqual(1, measurement.States.OfType<State>().Count());
+            Assert.That(graph.Observations.OfType<Measurement>().Count(), Is.EqualTo(1));
+            Assert.That(graph.States.OfType<State>().Count(), Is.EqualTo(1));
+            Assert.That(measurement.States.OfType<State>().Count(), Is.EqualTo(1));
         }
 
         [Test]
@@ -36,8 +36,8 @@ namespace Fugro.G2O.Test
 
             graph.Optimize();
 
-            Assert.AreEqual(3.0, state, 0.0001);
-            Assert.Greater(iteration, 0);
+            Assert.That((double)state, Is.EqualTo(3.0).Within(0.0001));
+            Assert.That(iteration, Is.GreaterThan(0));
         }
 
         [Test]
@@ -55,8 +55,8 @@ namespace Fugro.G2O.Test
             graph.IterationStarting += (s, e) => iteration = e.Iteration;
 
             graph.Optimize();
-            Assert.Greater(state, 3.5);
-            Assert.Less(state, 4.0);
+            Assert.That((double)state, Is.GreaterThan(3.5));
+            Assert.That((double)state, Is.LessThan(4.0));
         }
 
         [Test]
@@ -78,7 +78,7 @@ namespace Fugro.G2O.Test
 
             graph.Optimize();
 
-            Assert.AreEqual(0, iteration);
+            Assert.That(iteration, Is.EqualTo(0));
         }
 
         [Test]
@@ -98,7 +98,7 @@ namespace Fugro.G2O.Test
                 // Squared error is accessing unmanaged memory. After the graph is collected, the observation shoud still be accessible.
                 GC.Collect();
 
-                Assert.AreEqual(0.0, measurement.SquaredError, 1.0e-5);
+                Assert.That(measurement.SquaredError, Is.EqualTo(0.0).Within(1.0e-5));
             }
         }
 
@@ -117,7 +117,7 @@ namespace Fugro.G2O.Test
             {
                 var sum = measurement1.SquaredError + measurement2.SquaredError;
 
-                Assert.AreEqual(sum, graph.SquaredError, 1.0e-10);
+                Assert.That(graph.SquaredError, Is.EqualTo(sum).Within(1.0e-10));
             };
 
             graph.Optimize();
@@ -137,7 +137,7 @@ namespace Fugro.G2O.Test
             graph.AddObservation(measurement);
 
             graph.Optimize();
-            Assert.AreEqual(-101.0, state, 0.0001);
+            Assert.That((double)state, Is.EqualTo(-101.0).Within(0.0001));
         }
 
         [Test]

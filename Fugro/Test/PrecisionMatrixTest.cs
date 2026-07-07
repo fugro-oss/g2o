@@ -24,14 +24,14 @@ namespace Fugro.G2O.Test
 
             var precisionMatrix = point2DState.GetPrecisionMatrix();
 
-            Assert.AreEqual(point2DState.Estimate.X, center.X, 1e-12);
-            Assert.AreEqual(point2DState.Estimate.Y, center.Y, 1e-12);
+            Assert.That(point2DState.Estimate.X, Is.EqualTo(center.X).Within(1e-12));
+            Assert.That(point2DState.Estimate.Y, Is.EqualTo(center.Y).Within(1e-12));
 
-            Assert.AreEqual(0, precisionMatrix[1], 1e-12);
-            Assert.AreEqual(0, precisionMatrix[2], 1e-12);
+            Assert.That(precisionMatrix[1], Is.EqualTo(0).Within(1e-12));
+            Assert.That(precisionMatrix[2], Is.EqualTo(0).Within(1e-12));
 
-            Assert.AreEqual(1 / expectedXVariance, precisionMatrix[0], 1e-4);
-            Assert.AreEqual(1 / expectedYVariance + 0.001, precisionMatrix[3], 1e-6);
+            Assert.That(precisionMatrix[0], Is.EqualTo(1 / expectedXVariance).Within(1e-4));
+            Assert.That(precisionMatrix[3], Is.EqualTo(1 / expectedYVariance + 0.001).Within(1e-6));
         }
 
         [Test]
@@ -50,16 +50,16 @@ namespace Fugro.G2O.Test
 
             graph.Optimize(20);
 
-            Assert.AreEqual(point2DState.Estimate.X, center.X, 1e-12);
-            Assert.AreEqual(point2DState.Estimate.Y, center.Y, 1e-12);
+            Assert.That(point2DState.Estimate.X, Is.EqualTo(center.X).Within(1e-12));
+            Assert.That(point2DState.Estimate.Y, Is.EqualTo(center.Y).Within(1e-12));
 
             var precisionMatrix = point2DState.GetPrecisionMatrix();
 
-            Assert.AreEqual(0, precisionMatrix[1], 1e-12);
-            Assert.AreEqual(0, precisionMatrix[2], 1e-12);
+            Assert.That(precisionMatrix[1], Is.EqualTo(0).Within(1e-12));
+            Assert.That(precisionMatrix[2], Is.EqualTo(0).Within(1e-12));
 
-            Assert.AreEqual(1 / expectedVariance, precisionMatrix[0], 1e-3);
-            Assert.AreEqual(1 / expectedVariance, precisionMatrix[3], 1e-3);
+            Assert.That(precisionMatrix[0], Is.EqualTo(1 / expectedVariance).Within(1e-3));
+            Assert.That(precisionMatrix[3], Is.EqualTo(1 / expectedVariance).Within(1e-3));
         }
 
         [Test]
@@ -90,14 +90,14 @@ namespace Fugro.G2O.Test
             var rotatedCovariance = Multiply2By2(Multiply2By2(r, covariance), Transpose2By2(r));
             var rotatedPrecisionMatrix = Inverse2By2(rotatedCovariance);
 
-            Assert.AreEqual(point2DState.Estimate.X, center.X, 1e-12);
-            Assert.AreEqual(point2DState.Estimate.Y, center.Y, 1e-12);
+            Assert.That(point2DState.Estimate.X, Is.EqualTo(center.X).Within(1e-12));
+            Assert.That(point2DState.Estimate.Y, Is.EqualTo(center.Y).Within(1e-12));
 
-            Assert.AreEqual(0, rotatedPrecisionMatrix[1], 1e-3);
-            Assert.AreEqual(0, rotatedPrecisionMatrix[2], 1e-3);
+            Assert.That(rotatedPrecisionMatrix[1], Is.EqualTo(0).Within(1e-3));
+            Assert.That(rotatedPrecisionMatrix[2], Is.EqualTo(0).Within(1e-3));
 
-            Assert.AreEqual(2 / expectedVariance, rotatedPrecisionMatrix[0], 1e-2);
-            Assert.AreEqual(1 / expectedVariance, rotatedPrecisionMatrix[3], 1e-2);
+            Assert.That(rotatedPrecisionMatrix[0], Is.EqualTo(2 / expectedVariance).Within(1e-2));
+            Assert.That(rotatedPrecisionMatrix[3], Is.EqualTo(1 / expectedVariance).Within(1e-2));
         }
 
         private static double[] Inverse2By2(double[] data)

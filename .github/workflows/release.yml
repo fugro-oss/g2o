@@ -1,10 +1,19 @@
-name: Build and Test
+name: Release
+
+# Publishes the Fugro.G2O NuGet package when a version tag is pushed:
+#
+#   git tag v3.0.0
+#   git push origin v3.0.0
+#
+# The package version is taken from the tag (without the leading "v").
+# The .nupkg is attached to a GitHub Release for direct download.
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    tags: [ 'v*' ]
+
+permissions:
+  contents: write
 
 jobs:
   linux:
@@ -30,7 +39,7 @@ jobs:
         name: native-linux-x64
         path: build/bin/libfugro_g2o.so
 
-  windows:
+  release:
     runs-on: windows-latest
     needs: linux
     steps:
@@ -55,10 +64,12 @@ jobs:
         path: build/bin
 
     - name: Pack
-      run: dotnet pack Fugro/G2O.NET/Fugro.G2O.csproj -c Release -o packages
+      run: |
+        $version = $env:GITHUB_REF_NAME -replace '^v', ''
+        dotnet pack Fugro/G2O.NET/Fugro.G2O.csproj -c Release -o packages -p:Version=$version
 
-    - name: Publish
-      uses: actions/upload-artifact@v4
+    - name: Attach package to GitHub Release
+      uses: softprops/action-gh-release@v2
       with:
-        name: package
-        path: packages/*.nupkg
+        files: packages/*.nupkg
+        generate_release_notes: true

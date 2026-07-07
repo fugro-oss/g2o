@@ -1,59 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.3.32929.385
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{D6977FA8-E6AB-49F2-9CF2-C3CB90049B74}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fugro", "Fugro", "{C8A84E38-86BD-4256-9BFC-7D7ECD9EA293}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "G2O", "External\G2O.vcxproj", "{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fugro.G2O", "Fugro\G2O.NET\Fugro.G2O.csproj", "{86E5A6FC-558F-4617-B6F1-922C374E25CE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{80334003-1862-430F-8CE9-52FE97C452C9}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fugro.G2O", "Fugro\G2O\Fugro.G2O.vcxproj", "{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fugro.G2O.Test", "Fugro\Test\Fugro.G2O.Test.csproj", "{D3340FFF-2293-4F90-93BB-7C665BFD4013}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fugro.G2O.Test", "Fugro\Test\Fugro.G2O.Test.csproj", "{3F477159-4F0F-496E-9ADB-56785CE3FE10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		net48-release|x64 = net48-release|x64
-		net6-release|x64 = net6-release|x64
-		netcoreapp31-release|x64 = netcoreapp31-release|x64
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.Debug|x64.ActiveCfg = Debug|x64
-		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.Debug|x64.Build.0 = Debug|x64
-		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.net48-release|x64.ActiveCfg = net48-release|x64
-		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.net48-release|x64.Build.0 = net48-release|x64
-		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.net6-release|x64.ActiveCfg = net6-release|x64
-		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.net6-release|x64.Build.0 = net6-release|x64
-		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.netcoreapp31-release|x64.ActiveCfg = netcoreapp31-release|x64
-		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3}.netcoreapp31-release|x64.Build.0 = netcoreapp31-release|x64
-		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.Debug|x64.ActiveCfg = Debug|x64
-		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.Debug|x64.Build.0 = Debug|x64
-		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.net48-release|x64.ActiveCfg = net48-release|x64
-		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.net48-release|x64.Build.0 = net48-release|x64
-		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.net6-release|x64.ActiveCfg = net6-release|x64
-		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.net6-release|x64.Build.0 = net6-release|x64
-		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.netcoreapp31-release|x64.ActiveCfg = netcoreapp31-release|x64
-		{FDDEC9EF-D60C-4671-8743-0EF4B3EC9E4B}.netcoreapp31-release|x64.Build.0 = netcoreapp31-release|x64
-		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.Debug|x64.Build.0 = Debug|Any CPU
-		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.net48-release|x64.ActiveCfg = net48-release|Any CPU
-		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.net6-release|x64.ActiveCfg = net6-release|Any CPU
-		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.net6-release|x64.Build.0 = net6-release|Any CPU
-		{D3340FFF-2293-4F90-93BB-7C665BFD4013}.netcoreapp31-release|x64.ActiveCfg = netcoreapp31-release|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{AE6F3180-7B80-4D2F-BB69-791A9ADAFBD3} = {D6977FA8-E6AB-49F2-9CF2-C3CB90049B74}
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86E5A6FC-558F-4617-B6F1-922C374E25CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E5A6FC-558F-4617-B6F1-922C374E25CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E5A6FC-558F-4617-B6F1-922C374E25CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E5A6FC-558F-4617-B6F1-922C374E25CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F477159-4F0F-496E-9ADB-56785CE3FE10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F477159-4F0F-496E-9ADB-56785CE3FE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F477159-4F0F-496E-9ADB-56785CE3FE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F477159-4F0F-496E-9ADB-56785CE3FE10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4FE55CDD-E9E1-4B46-BDD6-2BD6BC8D26CA}
+	GlobalSection(NestedProjects) = preSolution
+		{86E5A6FC-558F-4617-B6F1-922C374E25CE} = {C8A84E38-86BD-4256-9BFC-7D7ECD9EA293}
+		{3F477159-4F0F-496E-9ADB-56785CE3FE10} = {C8A84E38-86BD-4256-9BFC-7D7ECD9EA293}
 	EndGlobalSection
 EndGlobal
