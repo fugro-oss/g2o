@@ -9,6 +9,7 @@
     <license type="expression">LGPL-2.1-only AND MPL-2.0 AND MIT AND BSD-2-Clause</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A .Net wrapper for the G2O (graph-based optimization) library</description>
+    <readme>README.md</readme>
     <copyright>Fugro.G2O contributors, G2O contributors, CSparse contributors, Eigen contributors.</copyright>
     <contentFiles>
       <files include="**" buildAction="None" copyToOutput="true" flatten="true" />
@@ -28,13 +29,14 @@
     <file src="bin\x64\net6-release\Fugro.G2O.dll" target="lib\net6.0" />
     <file src="bin\x64\net6-release\Fugro.G2O.xml" target="lib\net6.0" />
     <file src="bin\x64\net6-release\Ijwhost.dll" target="lib\net6.0" />
-    <file src="..\..\LICENSE.txt" target="contentFiles\any\netcoreapp3.1\Fugro-G2O-LICENSE.txt" />
-    <file src="..\..\LICENSE.txt" target="contentFiles\any\net48\Fugro-G2O-LICENSE.txt" />
-    <file src="..\..\LICENSE.txt" target="contentFiles\any\net6.0\Fugro-G2O-LICENSE.txt" />
-    <file src="..\..\LICENSE.txt" target="lib\net6.0\Fugro-G2O-LICENSE.txt" />
-    <file src="..\..\LICENSE.txt" target="lib\net48\Fugro-G2O-LICENSE.txt" />
-    <file src="..\..\LICENSE.txt" target="lib\netcoreapp3.1\Fugro-G2O-LICENSE.txt" />
-    <file src="..\..\LICENSE.txt" target="Content\Fugro-G2O-LICENSE.txt" />
-    <file src="..\..\LICENSE.txt" target="" />
+    <file src="..\..\LICENSE" target="contentFiles\any\netcoreapp3.1\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE" target="contentFiles\any\net48\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE" target="contentFiles\any\net6.0\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE" target="lib\net6.0\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE" target="lib\net48\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE" target="lib\netcoreapp3.1\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE" target="Content\Fugro-G2O-LICENSE.txt" />
+    <file src="..\..\LICENSE" target="LICENSE" />
+    <file src="..\..\README.md" target="README.md" />
   </files>
 </package>

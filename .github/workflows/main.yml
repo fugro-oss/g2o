@@ -19,27 +19,12 @@ jobs:
 
     - name: Setup NuGet.exe for use with actions
       uses: NuGet/setup-nuget@v1
-    
-    - name: Restore
-      run: nuget restore G2O.sln
-
+      
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.1
 
-    - name: Build .Net Framework
-      run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=net48-release /p:Platform=x64
-
-    - name: Build .Net Core
-      run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=netcoreapp31-release /p:Platform=x64
-
-    - name: Build .Net 6.0
-      run: msbuild $Env:GITHUB_WORKSPACE\G2O.sln /p:Configuration=net6-release /p:Platform=x64
-
-    - name: Test .Net 6.0
-      run: dotnet test $Env:GITHUB_WORKSPACE\Fugro\Test\bin\net6-release\net6.0\Fugro.G2O.Test.dll
-
-    - name: Pack
-      run: nuget pack $Env:GITHUB_WORKSPACE\Fugro\G2O\Fugro.G2O.nuspec
+    - name: Restore and Build 
+      run: ./build.bat
 
     - name: Publish
       uses: actions/upload-artifact@v2
