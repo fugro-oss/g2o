@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Fugro.G2O</AssemblyName>
+    <RootNamespace>Fugro.G2O</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Fugro.G2O</PackageId>
+    <Version>3.0.0</Version>
+    <Authors>Fugro</Authors>
+    <Description>A .NET wrapper for the G2O (graph-based optimization) library. Cross-platform: runs on Windows and Linux.</Description>
+    <Copyright>Fugro.G2O contributors, G2O contributors, CSparse contributors, Eigen contributors.</Copyright>
+    <PackageProjectUrl>https://github.com/fugro/g2o</PackageProjectUrl>
+    <PackageLicenseExpression>LGPL-2.1-only AND MPL-2.0 AND MIT AND BSD-2-Clause</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Native binaries produced by the CMake build (see CMakeLists.txt in the repository root). -->
+    <NativeBinDir>$(MSBuildThisFileDirectory)..\..\build\bin\</NativeBinDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="$(NativeBinDir)fugro_g2o.dll" Condition="Exists('$(NativeBinDir)fugro_g2o.dll')"
+             Link="fugro_g2o.dll" CopyToOutputDirectory="PreserveNewest"
+             Pack="true" PackagePath="runtimes/win-x64/native" />
+    <Content Include="$(NativeBinDir)libfugro_g2o.so" Condition="Exists('$(NativeBinDir)libfugro_g2o.so')"
+             Link="libfugro_g2o.so" CopyToOutputDirectory="PreserveNewest"
+             Pack="true" PackagePath="runtimes/linux-x64/native" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>

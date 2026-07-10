@@ -45,3 +45,6 @@ _ReSharper*/
 *.nuget.props
 *.nuget.targets
 /UpgradeLog.htm
+
+# CMake build output
+/build/

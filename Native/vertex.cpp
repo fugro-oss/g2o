@@ -1,17 +1,18 @@
-#pragma unmanaged
+#include "vertex.h"
+
 #include <Eigen/Cholesky>
 #include <Eigen/LU>
-#pragma managed
 
-#include "State.h"
+#include <cstring>
+#include <limits>
 
 using namespace g2o;
-using namespace Fugro::G2O;
+using namespace fugro::g2o_native;
 
-Vertex::Vertex(int dimension, BaseState^ state) :
-_state(state),
-_hessian(nullptr, dimension, dimension),
-_b(dimension)
+Vertex::Vertex(int dimension, const VertexCallbacks& callbacks) :
+  _hessian(nullptr, dimension, dimension),
+  _b(dimension),
+  _callbacks(callbacks)
 {
   _dimension = dimension;
 }
@@ -110,39 +111,39 @@ const Vertex::HessianBlockType& Vertex::A() const
 
 void Vertex::push()
 {
-  _state->Push();
+  _callbacks.stackOp(_callbacks.user, FUGRO_G2O_STACK_PUSH);
 }
 
 void Vertex::pop()
 {
-  _state->Pop();
+  _callbacks.stackOp(_callbacks.user, FUGRO_G2O_STACK_POP);
   updateCache();
 }
 
 void Vertex::discardTop()
 {
-  _state->DiscardTop();
+  _callbacks.stackOp(_callbacks.user, FUGRO_G2O_STACK_DISCARD_TOP);
 }
 
 int Vertex::stackSize() const
 {
-  return _state->GetStackSize();
+  return _callbacks.stackSize(_callbacks.user);
 }
 
 void Vertex::oplusImpl(const double* update)
 {
-  _state->Oplus(update);
+  _callbacks.oplus(_callbacks.user, update);
 }
 
 void Vertex::addOplusDelta(int index)
 {
-  _state->AddOplusDelta(index);
+  _callbacks.jacobianStep(_callbacks.user, index, 1);
   updateCache();
 }
 
 void Vertex::subtractOplusDelta(int index)
 {
-  _state->SubtractOplusDelta(index);
+  _callbacks.jacobianStep(_callbacks.user, index, -1);
   updateCache();
 }
 
@@ -150,7 +151,7 @@ void Vertex::setToOriginImpl()
 {
 }
 
-bool Vertex::read(std::istream& is)
+bool Vertex::read(std::istream&)
 {
   return true;
 }
