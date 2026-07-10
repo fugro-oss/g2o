@@ -145,3 +145,14 @@ A built version of Fugro.G2O contains components from the following sources:
 * csparse: LGPL-2.1+
 
 See [LICENSE.txt](LICENSE.txt) for details.
+
+
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our process for submitting pull requests to us, and please ensure
+you follow the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+## Authors
+
+See the list of [contributors](CONTRIBUTORS) who participated in this project.
